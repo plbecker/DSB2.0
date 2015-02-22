@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/patricebecker/AndroidStudioProjects/PictureToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/PictureToText/app/build/intermediates/pre-dexed/debug/classes-8033093e95d101b03710c0802786a3cceac88aa5.jar" />
+    </item>
+    <item
+        jar="/Users/patricebecker/AndroidStudioProjects/PictureToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/PictureToText/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-bd5d3c3a2b35794e362523923f11e56ce733f748.jar" />
+    </item>
+    <item
+        jar="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-3c5a2d97e9497836b3f2f7224f9fb6c6e3070bb6.jar" />
+    </item>
+    <item
+        jar="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/exploded-aar/DSB2.0.libraries/tess-two/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9188b2e5b86573fad2109622d99ad0a6852c600e">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/pre-dexed/debug/classes-3dc642d22bc081e5b71480c2a01061617dde9db9.jar" />
+    </item>
+    <item
+        jar="/Users/patricebecker/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-b268e5266162aa9aa2cf171bce43255eeda31376.jar" />
+    </item>
+    <item
+        jar="/Users/patricebecker/AndroidStudioProjects/PictureToText/app/build/intermediates/exploded-aar/PictureToText.libraries/tess-two/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e33729b66551c5095b4f9103976de710810d574">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/PictureToText/app/build/intermediates/pre-dexed/debug/classes-5f0012896bbfd868d5c82c39828b87ebf0881f49.jar" />
+    </item>
+    <item
+        jar="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/pre-dexed/debug/classes-c9a902e19081fe2c0ee9cf11ef361bac5e5a5c60.jar" />
+    </item>
+    <item
+        jar="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/DSB2.0/app/build/intermediates/pre-dexed/debug/classes-aaea4c3c48f3c2cce526c1c4720d5f352d7d00a2.jar" />
+    </item>
+    <item
+        jar="/Users/patricebecker/AndroidStudioProjects/PictureToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/patricebecker/AndroidStudioProjects/PictureToText/app/build/intermediates/pre-dexed/debug/classes-71d0c792289d47bede018d411661855709de4e69.jar" />
+    </item>
+
+</items>

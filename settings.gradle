@@ -1,0 +1,3 @@
+include ':app'
+include ':libraries:tess-two'
+include ':app:libs:jsoup-1.8.1'
