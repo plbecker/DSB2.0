@@ -5,6 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URL;
+import java.util.concurrent.ExecutionException;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,6 +16,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -25,12 +28,14 @@ import android.widget.ImageView;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 public class MainActivity extends Activity {
     public static final String PACKAGE_NAME = "net.icepc.dsb20";
     public static final String DATA_PATH = Environment.getExternalStorageDirectory().toString() + "/DSB20/";
-
     public static final String lang = "deu";
-
+    protected static final String PHOTO_TAKEN = "photo_taken";
     private static final String TAG = "DSB20.java";
 
     protected Button _button;
@@ -39,7 +44,6 @@ public class MainActivity extends Activity {
     protected String _path;
     protected boolean _taken;
 
-    protected static final String PHOTO_TAKEN = "photo_taken";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,10 @@ public class MainActivity extends Activity {
         String[] paths = new String[]{DATA_PATH, DATA_PATH + "tessdata/"};
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*
+        Implementation for creating a new directory on sd-card
+         */
 
         for (String path : paths) {
             File dir = new File(path);
@@ -92,6 +100,18 @@ public class MainActivity extends Activity {
         _button.setOnClickListener(new ButtonClickHandler());
 
         _path = DATA_PATH + "/ocr.jpg";
+
+    /*
+    Call ReturnWebsite and send Data to Server in ASyncTask
+    */
+        try {
+            Log.e(TAG, "Website Text RECEIVED" + new ReturnWebsite().execute().get());
+            _field.setText(new ReturnWebsite().execute().get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
     public class ButtonClickHandler implements View.OnClickListener {
@@ -212,4 +232,24 @@ public class MainActivity extends Activity {
 
     }
 
+}
+
+class ReturnWebsite extends AsyncTask<String,String,String>{
+    public static final String URL_WEBSITE = "mobile.dsbcontrol.de";
+    public static final String URL_PASSWORD = "eintracht";
+    public static final String URL_USERNAME = "188261";
+
+    @Override
+    protected String doInBackground(String... params) {
+        try {
+            Document doc = Jsoup.connect(URL_WEBSITE)
+                    .data("txtUserName",URL_USERNAME)
+                    .data("txtPassword",URL_PASSWORD)
+                    .post();
+            return doc.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
